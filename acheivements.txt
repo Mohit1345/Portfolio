@@ -1,0 +1,26 @@
+              <ul>
+                        <li>5th rank in all India in Kshitij IIT Kharagpur Data Science Hackathon</li>
+                        <li>1st rank for project gesture based game controller in hackatsits</li>
+                        <li>2nd rank for project edict ai in hackatsits</li>
+                        <li>
+                            <ul>
+                                <li>Research papers Published</li>
+                                <ol>IEEE
+                                    <li>ML4cure - Machine Learning for Healthcare</li>
+                                    <li>Ethfund - Blockchain based Crowdfunding app</li>
+                                </ol>
+                                <ol>Book paper Publish
+    <li>vertical axis wind turbine is in Top 100 projects of IISF-SIF </li>
+    <li>The Rise of AI-Generated News Videos</li>
+                                </ol>
+                                <ol>
+                                    <li>SIOT - Internet from Space</li>
+                                </ol>
+                                <ol>Patents
+                                    <li>Vertical Axis Wind Turbine</li>
+                                    <li>Edict ai</li>
+                                    <li></li>
+                                </ol>
+                            </ul>
+                        </li>
+                    </ul>

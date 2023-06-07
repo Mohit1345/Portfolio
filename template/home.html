@@ -53,13 +53,66 @@
             <ul style="list-style: none;" class="saa_menu_list">
                 <li><button class="btn" style="height:25vh;width:51.5vh;font-size: 25px;margin-right: 2vh; ">Skills</button></li>
                 <li><button class="btn" style="height:25vh;width:52.5vh;background-color: var(--clr-rose);font-size: 25px;margin-right: 2vh;">achievements</button></li>
-                <li><button class="btn" style="height:25vh;width:52.5vh;background-color:var(--clr-rose);font-size: 25px;">Experience</button></li>
+                <!-- <li><button class="btn" style="height:25vh;width:52.5vh;background-color:var(--clr-rose);font-size: 25px;">Experience</button></li> -->
             </ul>
             <ul style="list-style: none;" class="saa_menu_list_detail">
                 <li class="sae_detail" style="margin-right: 2vh;" ><img style="margin-top: 50px;margin-left: 0px;margin-right: 5px;padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt=""></li>
-                <li class="sae_detail" style="margin-right: 2vh;width: 45vh;">achievements</li>
+                <li class="sae_detail" style="margin-right: 2vh;width: 45vh;">
+                    <button class="btn" onclick="toggleVisibility('hackathons')">Hackathons</button>
+<button class="btn" onclick="toggleVisibility('papers')">Papers Published</button>
+<button class="btn" onclick="toggleVisibility('patents')">Patents</button>
 
-                <li class="sae_detail" style="margin-left:2px">Experience</li>
+<div id="hackathons" style="display: none;">
+    <ul>
+        <li>5th rank in all India in Kshitij IIT Kharagpur Data Science Hackathon</li>
+        <li>1st rank for project gesture-based game controller in hackatsits</li>
+        <li>2nd rank for project edict AI in hackatsits</li>
+    </ul>
+</div>
+
+<div id="papers" style="display: none;">
+    <ul>
+        <li>Research papers Published</li>
+        <ol>
+            <li>ML4cure - Machine Learning for Healthcare</li>
+            <li>Ethfund - Blockchain-based Crowdfunding app</li>
+        </ol>
+        <ol>
+            <li>Book paper Publish</li>
+            <ol>
+                <li>Vertical axis wind turbine is in Top 100 projects of IISF-SIF</li>
+                <li>The Rise of AI-Generated News Videos</li>
+            </ol>
+            <ol>
+                <li>SIOT - Internet from Space</li>
+            </ol>
+        </ol>
+    </ul>
+</div>
+
+<div id="patents" style="display: none;">
+    <ul>
+        <li>Patents</li>
+        <ol>
+            <li>Vertical Axis Wind Turbine</li>
+            <li>Edict AI</li>
+        </ol>
+    </ul>
+</div>
+
+<script>
+    function toggleVisibility(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+
+                </li>
+                <!-- <li class="sae_detail" style="margin-left:2px">Experience</li> -->
             </ul>
         </div>
     </Section>
