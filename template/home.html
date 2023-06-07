@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/hero.css' %}" type="text/css"/>
+<link rel="stylesheet" href="{% static 'css/SAA.css' %}" type="text/css"/>
+<script src="{% static 'javascript\\dynamic_text.js' %}"></script>
+<script src="{% static 'javascript/color.js' %}"></script>
+{% endblock %}
+{% block content %}
+<!-- NAVBAR -->
+<nav class="vertical-nav">
+    <ul>
+      <li><a href="#">⭕Home</a></li>
+      <li><a href="#wheel">⭕Projects</a></li>
+      <li><a href="#SAA">⭕SAE</a></li>
+      <button id="changeButton" class="btn changeButton" style="border: 1px dashed var(--clr-rose);border-radius:10px;">Change Theme</button>
+    </ul>
+  </nav>
+    <Section class="hero container">
+        <div class="hero_without_name">
+        <div class="hero_txt">
+            <h1 class="hero_h1">Explore!</h1>
+            <stong id="dynamicText" class="hero_dynamic_txt"></stong>
+        </div>
+        <img class="hero_img" src="{% static 'images\profile2.png' %}" alt="">
+    </div>
+        <div id="heading" class="name"><h1>MOHIT's Portfolio</h1></div>
+        <!-- <img id="hero_img" class="hero_img" src="" alt=""> -->
+    </Section>
+
+    <Section id="wheel" class="wheel container">
+        <!-- Project Wheel -->
+        <div id="chart" class="chart">
+            <h1 class="wheel_h1" style="margin-left:10px;">Project Wheel</h1>
+
+            <iframe src="{% static 'chart_home.html' %}"  width="500" height="350" style="margin-left:20px;margin-top: 40px ; border:0px;"></iframe>
+        </div>
+
+            <div class="text_content">
+                Welcome to my portfolio website! I specialize in web development using Django, AI and automation, and data science. 
+                With Django as my primary tool, I have built robust and scalable web applications, ranging from simple websites to complex enterprise solutions. 
+                I also have a passion for AI and automation, leveraging these technologies to streamline processes and solve problems efficiently.
+                 In the realm of data science, I extract valuable insights from data through analysis and predictive modeling. 
+                Additionally, I actively contribute to open-source projects, believing in the power of collaboration and knowledge sharing.</div>
+                <div class="chatbot">
+                    
+                </div>
+    </Section>
+
+    <Section id="SAA" class="SAA container" style="height: auto;">
+        <div class="SAA_menu">
+            <ul style="list-style: none;" class="saa_menu_list">
+                <li><button class="btn" style="height:25vh;width:51.5vh;font-size: 25px;margin-right: 2vh; ">Skills</button></li>
+                <li><button class="btn" style="height:25vh;width:52.5vh;background-color: var(--clr-rose);font-size: 25px;margin-right: 2vh;">achievements</button></li>
+                <li><button class="btn" style="height:25vh;width:52.5vh;background-color:var(--clr-rose);font-size: 25px;">Experience</button></li>
+            </ul>
+            <ul style="list-style: none;" class="saa_menu_list_detail">
+                <li class="sae_detail" style="margin-right: 2vh;" ><img style="margin-top: 50px;margin-left: 0px;margin-right: 5px;padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt=""></li>
+                <li class="sae_detail" style="margin-right: 2vh;width: 45vh;">achievements</li>
+
+                <li class="sae_detail" style="margin-left:2px">Experience</li>
+            </ul>
+        </div>
+    </Section>
+    <section class="gallery">
+
+    </section>
+
+    
+{% endblock %}
+
+

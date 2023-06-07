@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css\\blogs_index.css' %}">
+<script src="{% static 'javascript/color.js' %}"></script>
+
+{% endblock %}
+{% block content %}
+<div class="blog_index">
+    <div class="blog_categories container">
+        <table style = "margin:10px;">
+            <tr>
+                {% for i in all_categories %}
+                    <strong><td  style = "background-color: var(--clr-rose);border: 1px solid var(clr-rose);border-radius: 5px;"><button class="btn" style="margin:5px;">{{i.category_name}}</button></td></strong>  
+                    {% endfor %}
+                </tr>
+        </table>
+    </div>
+    <div class="blog_title container">
+    <table>
+        {% for i in all_blogs %}
+        <tr>
+                <td  style = "border:1px solid var(--clr-rose);"><strong style = "font-size: 20px;"><a href="{% url 'blog_description' i.id %}">{{i.title}}</a></strong>
+                <br> <p class="abstract" style="color:var(--clr-light);">{{i.abstract}}</p> 
+                </td> 
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</div>
+{% endblock %}

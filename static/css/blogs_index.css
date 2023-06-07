@@ -1,0 +1,27 @@
+.blog_head{
+    border: 0px solid;
+    background-color:var(--clr-rose);
+    border-radius: 10px;
+    /* display: flex; */
+    /* justify-content:flex-start; */
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical_two {
+    width: 25%;
+    background-color: var(--clr-indigo);
+}
+
+.vertical_one {
+    width:75%;
+}
+
+.abstract{
+    color: var(--clr-light);
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}">
+    <!-- <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css"/> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" type="text/css"/>
+
+
+
+    <!-- scripts -->
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <section class="header container">
+        <nav style="display:flex;flex-direction: row;">
+            <button class="dark_mode">
+                <img src="{% static 'images\\dark_mode.png' %}" style="height: 50px;width: 50px;margin-left: 0px;margin-right:50%" alt="">
+              </button>
+                        
+            <ul class="header__menu">   
+                <li><a class="header__link" href="#home">🏠Home</a></li>
+                <li><a class="header__link" href="#playground">🕹️PlayGround</a></li>
+                <li><a class="header__link" href="#funtime">🎉Funtime</a></li>
+                <li><a class="header__link" href="blog_effect">✍️Blogs</a></li>
+                <li><a class="header__link" href="#contact">📞Contact</a></li>
+                <li><a class="header__link" href="#services">🏢Services</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+
+            {% block content %}
+
+
+        {% endblock %}
+    <section class="footer container"></section>
+    <!-- <script src="{% static 'javascript\verticle_toggler.js' %}"></script> -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- <script src="{% static 'javascript\wheel.js' %}"></script> -->
+    <!-- <script src="{% static 'script.js' %}"></script> -->
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickable Pie Chart</title>
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/utils.css' %}" type="text/css"/> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+  <button id="backButton" class="btn" style="display: none;">back</button>
+  <canvas id="projectChart" style="display: none;size: 100;"></canvas>
+
+
+  <script>
+    // Sample project data
+    const projects = [
+      { domain: 'AI', count: 2, projects: [{ name: 'Automatic Timestamp creator', url: 'https://example.com/project1' }, { name: 'Book AI', url: 'https://example.com/project2' }, { name: 'Facial Sorter', url: 'https://example.com/project3' },{name:"Edict.ai",url:"www.something.com"}] },
+      { domain: 'DS', count: 3, projects: [{ name: 'Kdag colab', url: 'https://example.com/project4' }, { name: 'Youtube anaystics', url: 'https://example.com/project5' },{name:'ipl prediction',url:'www.css.com'}] },
+      { domain: 'Backend', count: 4, projects: [{ name: 'Blog_effect', url: 'https://example.com/project6' }, { name: 'ML4cure', url: 'https://example.com/project7' }, { name: 'Ethfund', url: 'https://example.com/project8' }] },
+      { domain: 'Automation', count: 2, projects: [{ name: 'PPt to video converter', url: 'https://example.com/project9' },{ name:'Edict.ai',url:""}] },
+    ];
+
+
+    // Extracting domain names and count
+    const domains = projects.map(project => project.domain);
+    const counts = projects.map(project => project.count);
+
+    let myChart, projectChart;
+
+    // Creating the initial pie chart
+    const ctx = document.getElementById('myChart').getContext('2d');
+    myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: domains,
+        datasets: [{
+          label: 'Project Count',
+          data: counts,
+          backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)'],
+          borderColor: 'rgba(255, 255, 255, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        onClick: (event, elements) => {
+          if (elements.length > 0) {
+            const clickedDomain = domains[elements[0].index];
+            displayProjects(clickedDomain);
+          }
+        }
+      }
+    });
+
+    // Function to display the projects for a selected domain
+    function displayProjects(domain) {
+      // Hide the domain chart
+      const domainChartCanvas = document.getElementById('myChart');
+      domainChartCanvas.style.display = 'none';
+
+      // Show the back button
+      const backButton = document.getElementById('backButton');
+      backButton.style.display = 'block';
+
+      const selectedProject = projects.find(project => project.domain === domain);
+      const projectNames = selectedProject.projects.map(project => project.name);
+      const projectURLs = selectedProject.projects.map(project => project.url);
+
+      // Show the project chart
+      const projectChartCanvas = document.getElementById('projectChart');
+      projectChartCanvas.style.display = 'block';
+      const projectCtx = projectChartCanvas.getContext('2d');
+      projectChart = new Chart(projectCtx, {
+        type: 'pie',
+        data: {
+          labels: projectNames,
+          datasets: [{
+            label: 'Projects',
+            data: Array(projectNames.length).fill(1),
+            backgroundColor: projectNames.map(() => getRandomColor()),
+            borderColor: 'rgba(255, 255, 255, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
+          tooltips: {
+            callbacks: {
+              label: (tooltipItem, data) => {
+                const dataIndex = tooltipItem.index;
+                return data.labels[dataIndex];
+              }
+            }
+          },
+          onClick: (event, elements) => {
+            if (elements.length > 0) {
+              const clickedProjectIndex = elements[0].index;
+              const clickedProjectURL = projectURLs[clickedProjectIndex];
+              window.open(clickedProjectURL, '_blank');
+            }
+          }
+        }
+      });
+    }
+
+    // Function to generate random colors
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Back button click event handler
+    const backButton = document.getElementById('backButton');
+    backButton.addEventListener('click', () => {
+      // Destroy the project chart
+      projectChart.destroy();
+
+      // Show the initial pie chart
+      const domainChartCanvas = document.getElementById('myChart');
+      domainChartCanvas.style.display = 'block';
+
+      // Hide the project chart
+      const projectChartCanvas = document.getElementById('projectChart');
+      projectChartCanvas.style.display = 'none';
+
+      // Hide the back button
+      backButton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

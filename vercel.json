@@ -1,0 +1,21 @@
+{
+    "builds": [
+      {
+        "src": "mohit/wsgi.py",
+        "use": "@vercel/python"
+      },{
+        "src":"blog_effect/wsgi.py",
+        "use":"@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "mohit/wsgi.py"
+      },
+      {
+        "src": "blog_effect/(.*)",
+        "dest": "blog_effect/wsgi.py"
+      }
+    ]
+}
