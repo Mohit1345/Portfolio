@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/SAA.css' %}" type="text/css"/>
 <script src="{% static 'javascript\\dynamic_text.js' %}"></script>
 <script src="{% static 'javascript/color.js' %}"></script>
+
+                
 {% endblock %}
 {% block content %}
 <!-- NAVBAR -->
@@ -44,7 +46,14 @@
                  In the realm of data science, I extract valuable insights from data through analysis and predictive modeling. 
                 Additionally, I actively contribute to open-source projects, believing in the power of collaboration and knowledge sharing.</div>
                 <div class="chatbot">
-                    
+                    <script src="https://openchat.so/chat.js"></script>
+                    <script>
+                        var chatConfig = {
+                        token: "P2GR9yIc4aZbM3XTp76K",
+                        };
+                        initializeChatWidget(chatConfig);
+                    </script>
+      <!-- <iframe id="chatFrame" src="https://openchat.so/chat/P2GR9yIc4aZbM3XTp76K"></iframe>   -->
                 </div>
     </Section>
 
