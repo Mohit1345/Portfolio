@@ -87,7 +87,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'neondb',
     'USER': 'chawlamohit45',
-    'PASSWORD': 'nzKJP6Cc9tQl',
+    'PASSWORD': DB_PASS,
     'HOST': 'ep-weathered-salad-387081.ap-southeast-1.aws.neon.tech',
     'PORT': '5432',
   }
@@ -144,3 +144,4 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DB_PASS = 'nzKJP6Cc9tQl'
