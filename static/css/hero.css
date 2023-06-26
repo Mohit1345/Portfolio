@@ -11,7 +11,7 @@
     border: 1px solid var(--clr-rose); */
     border-radius:10px ;
     /* height: 100%; */
-    height: 100vh; /* Set height to 100% of the viewport height */
+    height: auto; /* Set height to 100% of the viewport height */
     /* width: 100%; /* */
 
 }
@@ -19,7 +19,24 @@
 .hero_without_name{
   display: flex;
   flex-direction: row;
+} 
+
+@media only screen and (max-width: 768px) {
+  .hero_without_name {
+    flex-direction: column;
+  }
+  .hero_img{
+    border:3px solid var(--clr-rose);
+    border-radius: 50%;
+    align-items: center;
+    align-content: center;
+  }
+  .hero_txt{
+    size: 10px;
+    margin-left:20px ;
+  }
 }
+
 .name{
   text-align: center;
   margin-top: 10px;
@@ -34,10 +51,11 @@ backdrop-filter: blur(2.7px);
 -webkit-backdrop-filter: blur(2.7px);
 border: 1px solid rgba(55, 64, 65, 0.19);
 font-family:Verdana, Geneva, Tahoma, sans-serif;
-height: 100%;
+/* height: 100%; */
 
 text-decoration: line-through;
 font-size: 12vh;
+width: 100%;
 
 
 border:3px solid var(--clr-rose);
@@ -91,6 +109,7 @@ border-radius:10px;
     /* margin-top: 10px; */
 }
 
+
 .hero_img:hover{
     -webkit-filter: drop-shadow(1px 10px 0 var(--clr-rose))
     drop-shadow(-1px -1px 0 rgb(26, 30, 73));
@@ -141,6 +160,7 @@ border-radius:10px;
   padding: 20px;
   border-radius: 5px;
   z-index: 999; /* Increase the z-index to ensure it appears above other elements */
+  height:auto;
 
 
   /* From https://css.glass */
@@ -197,6 +217,7 @@ border-radius:10px;
   /* gap:50rem; */
   /* align-items: center; */
   height: auto;
+  width: 100%;
 }
 
 .chart{
@@ -209,6 +230,7 @@ border-radius:10px;
   /* align-items: center; */
   /* background-color: blue; */
   height: auto;
+  width: 80%  ;
 }
 
 .text_content{
@@ -218,8 +240,11 @@ border-radius:10px;
   width: 30%; 
   margin-top: 5vh; 
   border-spacing: 5px;
-  font-size:20px;
-  height: 45vh;
+  /* font-size:20px; */
+  font-size: 20px;
+  
+  height: auto;
+  width: 43%;
   /* From https://css.glass */
 /* background: var(--clr-rose); */
 padding: 2vh;
@@ -234,6 +259,7 @@ backdrop-filter: blur(0px);
 /* border: 1px dashed rgba(255, 255, 255, 0.35); */
 text-align: center;
 justify-content:center;
+margin: 1vh;
 }
 
 .wheel:hover{
@@ -263,6 +289,72 @@ border: 1px solid rgba(7, 10, 19, 0.19);
   color: #F8F8F8;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: var(--clr-rose);
+}
+
+
+
+.featured_projects {
+  border: 1px dashed ver(--clr-rose);
+  overflow: hidden;
+  max-height: 700px;
+  margin-bottom: 10px;
+  height: auto;
+  width: auto;
+}
+.featured_img{
+  align-items: center;
+  align-content: center;
+  margin: 0vh 2vh 2vh 2vh;
+  height: 220px;
+  width: 400px;
+  border: 1px solid var(--clr-rose);
+  border-radius: 10px;
+}
+
+
+
+/* Responsiveness */
+/* @media (max-width: 750){
+  .name{
+    font-size: 4vh;
+  }
+  .hero_txt{
+    font-size: 10px;
+  }
+  .img{
+    display: none;
+  }
+  .hero_without_name{
+    display: column;
+  }
+}
+ */
+
+ @media only screen and (max-width: 412px) {
+  h1{
+    size: 10px;
+  }
+}
+
+
+
+@media only screen and  (max-width: 1280px){
+  .wheel{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  .text_content{
+    height:auto;
+    font-size: auto;
+    width: 80%;
+  }
+  .hero{
+    width: auto;
+  }
+  .name{
+    font-size: 8vh;
+  }
 }
 
 

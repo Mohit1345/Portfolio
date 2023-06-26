@@ -5,14 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}">
+    <title>Mohit's Port</title>
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.png' %}">
     <!-- <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css"/> -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static 'css/utils.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static 'css/header.css' %}" type="text/css"/>
 
-
+    <script src="https://openchat.so/chat.js"></script>
+    <script>
+        var chatConfig = {
+        token: "P2GR9yIc4aZbM3XTp76K",
+        };
+        initializeChatWidget(chatConfig);
+    </script>
+<style>
+    .social-media-wrapper {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 9999;
+      }
+      
+      .social-media-button {
+        width: 50px;
+        height: 50px;
+        /* background-color: var(--clr-rose); */
+        /* border:1px solid var(--clr-rose); */
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      
+      .social-media-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        /* background-color: #fff; */
+        border-radius: 50%;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s;
+      }
+      
+      .social-media-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border:1px solid var(--clr-rose); 
+        /* background-color: var(--clr-rose); */
+        border-radius: 50%;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+      }
+      
+      .social-media-link img {
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+      
+      .social-media-options.open {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      .social-media-options.open .social-media-link {
+        transform: rotate(360deg);
+      }
+      
+  </style>
 
     <!-- scripts -->
 
@@ -27,11 +96,12 @@
                         
             <ul class="header__menu">   
                 <li><a class="header__link" href="#home">🏠Home</a></li>
-                <li><a class="header__link" href="#playground">🕹️PlayGround</a></li>
-                <li><a class="header__link" href="#funtime">🎉Funtime</a></li>
+                <!-- <li><a class="header__link" href="#playground">🕹️PlayGround</a></li> -->
+                <!-- <li><a class="header__link" href="#funtime">🎉Funtime</a></li> -->
                 <li><a class="header__link" href="blog_effect">✍️Blogs</a></li>
-                <li><a class="header__link" href="#contact">📞Contact</a></li>
-                <li><a class="header__link" href="#services">🏢Services</a></li>
+                <li><a class="header__link" href="contact">📞Contact</a></li>
+                <li><a href="{% static 'Mohits portfolio (ml).pdf' %}"><button class="btn">Resume</button></a></li>
+                <!-- <li><a class="header__link" href="#services">🏢Services</a></li> -->
             </ul>
         </nav>
     </section>
@@ -42,10 +112,43 @@
 
 
         {% endblock %}
+
+<footer>
+
+    <div class="social-media-wrapper">
+        <div class="social-media-button"><img src="static\images\social_media\social_connect.svg" ></div>
+        <div class="social-media-options">
+          <a href="https://github.com/Mohit1345"  target="_blank" class="social-media-link">
+            <img src="static\images\social_media\github.svg" style="height:30px;width:30px" alt="Github">
+          </a>
+          <a href="https://twitter.com/VibaliJoshi/status/1672472886915788800?t=Ha2wiylfC4x9WijqJvYXAA&s=08"  target="_blank" class="social-media-link">
+            <img src="static\images\social_media\twitter.png" alt="Twitter">
+          </a>
+          <a href="https://www.linkedin.com/in/mohit-chawla13"  target="_blank" class="social-media-link">
+            <img src="static\images\social_media\linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://instagram.com/chawlamohit1313?igshid=ZDc4ODBmNjlmNQ=="  target="_blank" class="social-media-link">
+            <img src="static\images\social_media\insta.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+      
+      
+</footer>
     <section class="footer container"></section>
     <!-- <script src="{% static 'javascript\verticle_toggler.js' %}"></script> -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- <script src="{% static 'javascript\wheel.js' %}"></script> -->
     <!-- <script src="{% static 'script.js' %}"></script> -->
+    <script>
+        const button = document.querySelector('.social-media-button');
+const options = document.querySelector('.social-media-options');
+
+button.addEventListener('click', () => {
+  options.classList.toggle('open');
+});
+
+    </script>
+    <script src="{% static 'javascript/featured_projects.js' %}"></script>
 </body>
 </html>

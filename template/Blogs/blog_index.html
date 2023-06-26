@@ -6,7 +6,7 @@
 
 {% endblock %}
 {% block content %}
-<div class="blog_index">
+<!-- <div class="blog_index">
     <div class="blog_categories container">
         <table style = "margin:10px;">
             <tr>
@@ -27,5 +27,38 @@
         {% endfor %}
     </table>
     </div>
+</div> -->
+
+<div class="blog_index">
+    <div class="blog_categories container">
+        <table style="margin: 10px;">
+            <tr>
+                <td style="background-color: var(--clr-rose);border: 1px solid var(clr-rose);border-radius: 5px;">
+                    <a href="?category=all" class="btn" style="margin: 5px;">All</a>
+                </td>
+                {% for category in all_categories %}
+                    <td style="background-color: var(--clr-rose);border: 1px solid var(clr-rose);border-radius: 5px;">
+                        <a href="?category={{ category.category_name }}" class="btn" style="margin: 5px;">{{ category.category_name }}</a>
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <div class="blog_title container">
+        <table>
+            {% for blog in all_blogs %}
+            <tr>
+                <td style="border: 1px solid var(--clr-rose);">
+                    <strong style="font-size: 20px;">
+                        <a href="{% url 'blog_description' blog.id %}">{{ blog.title }}</a>
+                    </strong>
+                    <br>
+                    <p class="abstract text_content" style="color: var(--clr-light);">{{ blog.abstract }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
+
 {% endblock %}

@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static %}
+  {% block head %}
+  <title>Research Work</title>
+  <link rel="stylesheet" href="{% static 'css/hero.css' %}" type="text/css"/>
+<link rel="stylesheet" href="{% static 'css/SAA.css' %}" type="text/css"/>
+<script src="{% static 'javascript/color.js' %}"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h3{
+      color: var(--clr-indigo);
+    }
+    i{
+      color:var(--clr-rose);
+    }
+
+    details{
+      background-color:var(--clr-light);
+      color: black;
+        }
+
+
+    .paper-container {
+      width: 800px;
+      margin: 0 auto;
+      background-color: var(--clr-light);
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid var(--clr-rose);
+      border-radius: 3px;
+    }
+    
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--clr-indigo);
+    }
+    
+    .content-container {
+      display: flex;
+    }
+    
+    .left-section, .right-section {
+      width: calc(50% - 2px);
+      padding: 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+    
+    .left-section {
+      background-color: #fefefe;
+      border-radius: 5px;
+    }
+    
+    .right-section {
+      background-color: #fefefe;
+      border-radius: 5px;
+    }
+    
+    .vertical-line {
+      width: 4px;
+      background-color: var(--clr-rose);
+      margin: 0 20px;
+    }
+  </style>
+  {% endblock %}
+
+
+{% block content %}
+<body>
+  <div class="paper-container">
+    <h1 class="heading">Research Paper and Patents</h1>
+    <div class="content-container">
+      <div class="left-section">
+        <span><i style="color:var(--clr-indigo)"><b>Abstract:</b></i><i style="color:black"> Welcome to our comprehensive collection of research papers from esteemed journals such as IEEE and Springer, showcased on the left side.
+
+          On the right side, we present an assortment of patents and projects published in books. These innovative endeavors represent our commitment to bridging the gap between research and practical applications, fostering advancements adn innovation across diverse fields.
+          
+          Explore our repository to delve into the world of academic research and pioneering achievements, where profound ideas merge with tangible outcomes.
+        </i></span>
+        <br><br>
+
+        <!-- Research and Review Papers -->
+        <h3>Research Papers</h3>
+        <ol>
+        <li><i> IEEE Published</i></li>
+        <br>
+        <details>
+          {% for ieee_paper in ieee %}
+          <summary><b><a target=”_blank”  href="{{ieee_paper.link}}">{{ieee_paper.title}}</a></b></summary>
+          <p>{{ieee_paper.summary}}</p>
+          {% endfor %}
+        </details>
+<br>
+        <li><i> Springer Published</i></li>
+        <br>
+        <details>
+          {% for sprin_paper in springer %}
+          <summary><b><a target=”_blank”  href="{{sprin_paper.link}}">{{sprin_paper.title}}</a></b></summary>
+          <p>{{sprin_paper.summary}}</p>
+          {% endfor %}
+        </details>
+        
+      </ol>
+<!-- 
+      <h4><i>Review Papers</i></h4>
+      <ol>
+      <li><i> IEEE Published</i></li>
+      <br>
+      <details>
+        <summary><b>Ml4CURE-Machine Learning for healthcare</b></summary>
+        <p>This is the additional information that will be displayed when the details section is expanded.</p>
+        <a href="">Link</a>
+      </details>
+<br>
+      <li><i> Springer Published</i></li>
+      <br>
+      <details>
+        <summary><b>Ml4CURE-Machine Learning for healthcare</b></summary>
+        <p>This is the additional information that will be displayed when the details section is expanded.</p>
+      </details>
+      
+    </ol> -->
+
+
+
+      </div>
+
+
+
+    
+
+
+
+      <div class="vertical-line"></div>
+
+
+
+
+      <!-- Patents and Book featured Projects -->
+
+      <div class="right-section">
+        <h3>🅿Patents</h3>
+        <ol>
+        <li><i> Indian Patents</i></li>
+        <br>
+        <details>
+          {% for indian_patent in patents %}
+          <summary><b><a target=”_blank”  href="{{indian_patent.link}}">{{indian_patent.title}}</a></b></summary>
+          <p>{{indian_patent.summary}}/p>
+            {% endfor %}
+        </details>
+<br>
+        
+      </ol>
+
+      <h3>📘Book Featured</h3>
+      <ol>
+      <li><i> IEEE Published</i></li>
+      <br>
+      <details>
+        {% for books in book_featured %}
+        <summary><b><a target=”_blank”  href="{{ books.link }}">{{books.title}}</a></b></summary>
+        <p>{{books.summary}}</p>
+        {% endfor %}
+      </details>
+<br>
+      <!-- <li><i> Springer Published</i></li>
+      <br>
+      <details>
+        <summary><b><a href=""></a></b></summary>
+        <p>This is the additional information that will be displayed when the details section is expanded.</p>
+      </details> -->
+      
+    </ol>
+
+      </div>
+    </div>
+    <!-- Additional content below the divided sections -->
+    <p>Thanks for exploring!</p>
+  </div>
+
+  
+
+{% endblock %}

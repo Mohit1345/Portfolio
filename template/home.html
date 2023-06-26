@@ -7,16 +7,15 @@
 <script src="{% static 'javascript\\dynamic_text.js' %}"></script>
 <script src="{% static 'javascript/color.js' %}"></script>
 
-                
 {% endblock %}
 {% block content %}
 <!-- NAVBAR -->
 <nav class="vertical-nav">
     <ul>
-      <li><a href="#">⭕Home</a></li>
-      <li><a href="#wheel">⭕Projects</a></li>
-      <li><a href="#SAA">⭕SAE</a></li>
-      <button id="changeButton" class="btn changeButton" style="border: 1px dashed var(--clr-rose);border-radius:10px;">Change Theme</button>
+      <li><a href="#"><img style="padding-left: 2px;height: 36px;width: 36px;" src="{% static 'verti-nav\home.svg' %}" alt=""></a></li>
+      <li><a href="#wheel"><img style="padding-left: 2px;height: 36px;width: 36px;" src="{% static 'verti-nav\projects2.png' %}" alt=""></a></li>
+      <li><a href="#SAA"><img style="padding-left: 2px;height: 36px;width: 36px;" src="{% static 'verti-nav\achievements2.png' %}" alt=""></a></li>
+      <button id="changeButton" class="btn changeButton" style="border: 1px dashed var(--clr-rose);border-radius:10px;"><img src="static\verti-nav\icons8-color-switch.svg" alt=""></button>
     </ul>
   </nav>
     <Section class="hero container">
@@ -36,7 +35,7 @@
         <div id="chart" class="chart">
             <h1 class="wheel_h1" style="margin-left:10px;">Project Wheel</h1>
 
-            <iframe src="{% static 'chart_home.html' %}"  width="500" height="350" style="margin-left:20px;margin-top: 40px ; border:0px;"></iframe>
+            <iframe src="{% static 'chart_home.html' %}"  width="80%"   height="350"  style="margin-left:20px;margin-top: 40px ; border:0px;"></iframe>
         </div>
 
             <div class="text_content">
@@ -45,14 +44,17 @@
                 I also have a passion for AI and automation, leveraging these technologies to streamline processes and solve problems efficiently.
                  In the realm of data science, I extract valuable insights from data through analysis and predictive modeling. 
                 Additionally, I actively contribute to open-source projects, believing in the power of collaboration and knowledge sharing.</div>
+
+                
+            <div class="featured_projects text_content">
+                <img class="featured_img" src="https://i.ytimg.com/vi/h--t7_XiW7U/maxresdefault.jpg" alt="">
+                <div class="Project_title abstract"><b>Edict_ai</b></div>
+                <div class="featured_desc abstract">Project which automatically converts news to video with ai and automate these tasks</div>
+                <div class="btn featured_tags">Ai and automation</div>
+            </div>
+
                 <div class="chatbot">
-                    <script src="https://openchat.so/chat.js"></script>
-                    <script>
-                        var chatConfig = {
-                        token: "P2GR9yIc4aZbM3XTp76K",
-                        };
-                        initializeChatWidget(chatConfig);
-                    </script>
+
       <!-- <iframe id="chatFrame" src="https://openchat.so/chat/P2GR9yIc4aZbM3XTp76K"></iframe>   -->
                 </div>
     </Section>
@@ -61,17 +63,17 @@
         <div class="SAA_menu">
             <ul style="list-style: none;" class="saa_menu_list">
                 <li><button class="btn" style="height:25vh;width:51.5vh;font-size: 25px;margin-right: 2vh; ">Skills</button></li>
-                <li><button class="btn" style="height:25vh;width:52.5vh;background-color: var(--clr-rose);font-size: 25px;margin-right: 2vh;">achievements</button></li>
+                <li class="sae_detail" style="margin-right: 2vh;" ><img style="margin-top: 50px;margin-left: 0px;margin-right: 5px;padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt=""></li>
+                
                 <!-- <li><button class="btn" style="height:25vh;width:52.5vh;background-color:var(--clr-rose);font-size: 25px;">Experience</button></li> -->
             </ul>
             <ul style="list-style: none;" class="saa_menu_list_detail">
-                <li class="sae_detail" style="margin-right: 2vh;" ><img style="margin-top: 50px;margin-left: 0px;margin-right: 5px;padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt=""></li>
+                <li><button class="btn" style="height:25vh;width:52.5vh;background-color: var(--clr-rose);font-size: 25px;margin-right: 2vh;">achievements</button></li>
                 <li class="sae_detail" style="margin-right: 2vh;width: 45vh;">
                     <button class="btn" onclick="toggleVisibility('hackathons')">Hackathons</button>
-<button class="btn" onclick="toggleVisibility('papers')">Papers Published</button>
-<button class="btn" onclick="toggleVisibility('patents')">Patents</button>
+                    <button class="btn"  onclick="window.location.href='research'" >Research work</button>
 
-<div id="hackathons" style="display: none;">
+<div id="hackathons" style="display: none;font-family: Arial;">
     <ul>
         <li>5th rank in all India in Kshitij IIT Kharagpur Data Science Hackathon</li>
         <li>1st rank for project gesture-based game controller in hackatsits</li>
@@ -79,35 +81,7 @@
     </ul>
 </div>
 
-<div id="papers" style="display: none;">
-    <ul>
-        <li>Research papers Published</li>
-        <ol>
-            <li>ML4cure - Machine Learning for Healthcare</li>
-            <li>Ethfund - Blockchain-based Crowdfunding app</li>
-        </ol>
-        <ol>
-            <li>Book paper Publish</li>
-            <ol>
-                <li>Vertical axis wind turbine is in Top 100 projects of IISF-SIF</li>
-                <li>The Rise of AI-Generated News Videos</li>
-            </ol>
-            <ol>
-                <li>SIOT - Internet from Space</li>
-            </ol>
-        </ol>
-    </ul>
-</div>
 
-<div id="patents" style="display: none;">
-    <ul>
-        <li>Patents</li>
-        <ol>
-            <li>Vertical Axis Wind Turbine</li>
-            <li>Edict AI</li>
-        </ol>
-    </ul>
-</div>
 
 <script>
     function toggleVisibility(elementId) {
@@ -131,5 +105,3 @@
 
     
 {% endblock %}
-
-
