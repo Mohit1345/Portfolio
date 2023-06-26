@@ -24,7 +24,7 @@ DB_PASS = 'nzKJP6Cc9tQl'
 SECRET_KEY = 'django-insecure-7n9v-#5tj43)d#q+tk$*1r0p#z+38xsiw3ni*d39dptz-fh+7z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app','.now.sh','*']
 
