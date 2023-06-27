@@ -88,7 +88,7 @@ DATABASES = {
     'NAME': 'neondb',
     'USER': 'chawlamohit45',
     'PASSWORD': DB_PASS,
-    'HOST': 'ep-weathered-salad-387081.ap-southeast-1.aws.neon.tech',
+    'HOST': 'ep-plain-wave-731328.ap-southeast-1.aws.neon.tech',
     'PORT': '5432',
   }
 }
