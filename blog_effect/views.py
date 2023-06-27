@@ -27,7 +27,7 @@ def blog_index(request):
         'selected_category': selected_category,
     }
 
-    return render(request, 'Blogs\\blog_index.html', context)
+    return render(request, 'Blogs/blog_index.html', context)
 
 
 
@@ -36,4 +36,4 @@ def blog_description(request, title):
     context = {
         'blog_detail':blog,
     }
-    return render(request, 'Blogs\\blog_description.html', context)
+    return render(request, 'Blogs/blog_description.html', context)
