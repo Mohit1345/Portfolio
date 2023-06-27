@@ -82,16 +82,16 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#   'default': {
-#     'ENGINE': 'django.db.backends.postgresql',
-#     'NAME': 'neondb',
-#     'USER': 'chawlamohit45',
-#     'PASSWORD': DB_PASS,
-#     'HOST': 'ep-weathered-salad-387081.ap-southeast-1.aws.neon.tech',
-#     'PORT': '5432',
-#   }
-# }
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'neondb',
+    'USER': 'chawlamohit45',
+    'PASSWORD': DB_PASS,
+    'HOST': 'ep-weathered-salad-387081.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+  }
+}
 
 
 # Password validation
