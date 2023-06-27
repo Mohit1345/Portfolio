@@ -12,19 +12,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PGPASSWORD = 'nzKJP6Cc9tQl'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7n9v-#5tj43)d#q+tk$*1r0p#z+38xsiw3ni*d39dptz-fh+7z'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG',cast=bool)
 
 ALLOWED_HOSTS = ['.vercel.app','.now.sh','*']
 
@@ -87,7 +87,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'neondb',
     'USER': 'chawlamohit45',
-    'PASSWORD': PGPASSWORD,
+    'PASSWORD': config('PGPASSWORD'),
     'HOST': 'ep-weathered-salad-387081.ap-southeast-1.aws.neon.tech',
     'PORT': '5432',
   }
@@ -155,5 +155,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = '44ed7a1dde8dad'
-EMAIL_HOST_PASSWORD = '0887be4fdb9906'
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = '2525'
