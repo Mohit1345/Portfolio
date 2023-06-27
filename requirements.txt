@@ -2,7 +2,7 @@
 Django==4.2.2
 Pillow==9.5.0
 python-decouple
-psycopg2
+psycopg2-binary
 sqlparse==0.4.4
 typing_extensions==4.6.3
 tzdata==2023.3
