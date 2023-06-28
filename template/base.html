@@ -94,15 +94,16 @@
                 <img src="{% static 'images\\dark_mode.png' %}" style="height: 50px;width: 50px;margin-left: 0px;margin-right:50%" alt="">
               </button>
                         
-            <ul class="header__menu">   
-                <li><a class="header__link" href="#home">🏠Home</a></li>
+              <ul class="header__menu">   
+                <li><a class="header__link" href="{% url 'home' %}">🏠Home</a></li>
                 <!-- <li><a class="header__link" href="#playground">🕹️PlayGround</a></li> -->
                 <!-- <li><a class="header__link" href="#funtime">🎉Funtime</a></li> -->
-                <li><a class="header__link" href="/blog_effect">✍️Blogs</a></li>
-                <li><a class="header__link" href="contact">📞Contact</a></li>
+                <li><a target="_blank" class="header__link" href="/blog_effect">✍️Blogs</a></li>
+                <li><a class="header__link" href="{% url 'contact' %}">📞Contact</a></li>
                 <li><a href="{% static 'Mohits portfolio (ml).pdf' %}"><button class="btn">Resume</button></a></li>
                 <!-- <li><a class="header__link" href="#services">🏢Services</a></li> -->
             </ul>
+            
         </nav>
     </section>
 

@@ -37,3 +37,6 @@ def blog_description(request, title):
         'blog_detail':blog,
     }
     return render(request, 'Blogs/blog_description.html', context)
+
+
+

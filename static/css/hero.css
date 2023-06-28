@@ -246,7 +246,7 @@ backdrop-filter: blur(0px);
 /* border: 1px dashed rgba(255, 255, 255, 0.35); */
 text-align: center;
 justify-content:center;
-margin: 1vh;
+/* margin: 1vh; */
 }
 
 .wheel:hover{
@@ -471,5 +471,18 @@ h1{
 @media (min-width: 1280px) and (max-width: 1439px) {
   .hero_dynamic_txt {
     font-size: 4.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero_h1 {
+    font-size: var(--size-6xl);
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--clr-rose);
+    color: #F8F8F8;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: var(--clr-rose);
   }
 }
