@@ -90,6 +90,11 @@ border: 1px solid var(--clr-rose);
   border-radius: 6px;
 }
 
+.skills{
+  font-size: 20px;
+  width:51.5vh;
+}
+
 
 /* #hackathons {
   font-size: 20px;
@@ -106,6 +111,9 @@ border: 1px solid var(--clr-rose);
     }
     .sae_detail{
       size: 10px;
+    }
+    .skills{
+      width:25vh;
     }
 
   }
@@ -131,4 +139,109 @@ border: 1px solid var(--clr-rose);
     flex-direction:column;
   }
 }
+
+
+
+/* Media queries */
+@media (min-width: 300px) {
+  .SAA.container {
+    height: auto;
+  }
+
+  .SAA_menu {
+    margin-left: 5%;
+  }
+
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 20px;
+  }
+
+  .sae_detail {
+    font-size: 20px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 18px;
+    width: auto;
+  }
+  .SAA_menu{
+    flex-direction: column;
+    width: auto;
+  }
+  .sae_detail {
+    font-size: 18px;
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 20px;
+    width: 80%;
+  }
+  .SAA_menu{
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .sae_detail {
+    font-size: 20px;
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 22px;
+  }
+  .SAA_menu{
+    flex-direction: column;
+  }
+  
+  .sae_detail {
+    font-size: 22px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 23px;
+  }
+  
+  .sae_detail {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .saa_menu_list,
+  .saa_menu_list_detail {
+    font-size: 24px;
+  }
+  
+  .sae_detail {
+    font-size: 24px;
+  }
+}
+
+/* Additional style for preventing overflow */
+.saa_menu_list_detail {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Add more media queries for larger screen sizes if needed */
+
 
