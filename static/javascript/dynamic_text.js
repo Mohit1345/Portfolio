@@ -6,7 +6,6 @@ const textOptions = [
     'Graphic Designing',
     'Innovative Solutions',
     'Creative Designs',
-    'Self-made prompter'
   ];
 
   // Index of the currently displayed text
