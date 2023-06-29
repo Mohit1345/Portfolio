@@ -27,6 +27,7 @@ class Projects(models.Model):
 class Featured_projects(models.Model):
     # Featured_project = models.ForeignKey(Projects,on_delete=models.CASCADE,unique=True)
     Featured_project = models.OneToOneField(Projects,on_delete=models.CASCADE)
+    tagline = models.CharField(max_length=75,blank=True,null=True)
 
 
     

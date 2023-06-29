@@ -106,8 +106,10 @@ def featured_projects_api(request):
     try:
         featured_project = Featured_projects.objects.select_related('Featured_project')
         
+        
         if featured_project:
             random_project = choice(featured_project)
+            tagline = random_project.tagline
             project = random_project.Featured_project
             # Extract the first 10 words from the description
             description_words = re.findall(r'\b\w+\b', project.description)[:10]
@@ -117,7 +119,7 @@ def featured_projects_api(request):
             
             featured_project_data = {
                 'name': project.name,
-                'description': description,
+                'description': tagline,
                 'tags':tags,
                 # Add more fields as needed
             }
