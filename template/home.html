@@ -58,47 +58,47 @@
       <!-- <iframe id="chatFrame" src="https://openchat.so/chat/P2GR9yIc4aZbM3XTp76K"></iframe>   -->
                 </div>
     </Section>
-
-    <Section id="SAA" class="SAA container" style="height: auto;align-items: center;">
+    <Section id="SAA" class="SAA container" style="height: auto; align-items: center;">
         <div class="SAA_menu">
-            <ul style="list-style: none;" class="saa_menu_list">
-                <li><button class="btn skills" style="height:25vh;font-size: 25px;margin-right: 2vh; ">Skills</button></li>
-                <li class="sae_detail" style="margin-right: 2vh;" ><img style="margin-top: 50px;margin-left: 0px;margin-right: 5px;padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt=""></li>
-                
-                <!-- <li><button class="btn" style="height:25vh;width:52.5vh;background-color:var(--clr-rose);font-size: 25px;">Experience</button></li> -->
-            </ul>
-            <ul style="list-style: none;" class="saa_menu_list_detail">
-                <li><button class="btn skills " style="height:25vh;background-color: var(--clr-rose);font-size: 25px;margin-right: 2vh;">achievements</button></li>
-                <li class="sae_detail" style="margin-right: 2vh;">
-                    <button class="btn" onclick="toggleVisibility('hackathons')">Hackathons</button>
-                    <button class="btn"  onclick="window.location.href='research'" >Research work</button>
-
-<div id="hackathons" style="display: none;font-family: Arial;">
-    <ul>
-        <li>5th rank in all India in <br> KshitijIIT Kharagpur Data Science Hackathon</li>
-        <li>1st rank for project <br>gesture-based game controller in hackatsits</li>
-        <li>2nd rank for project <br>edict AI in hackatsits</li>
-    </ul>
-</div>
-
-
-
-<script>
-    function toggleVisibility(elementId) {
-        var element = document.getElementById(elementId);
-        if (element.style.display === "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
-    }
-</script>
-
-                </li>
-                <!-- <li class="sae_detail" style="margin-left:2px">Experience</li> -->
-            </ul>
+          <ul style="list-style: none;" class="saa_menu_list">
+            <li>
+              <button class="btn skills" style="height: 25vh; font-size: 25px; margin-right: 2vh;">Skills</button>
+            </li>
+            <li class="sae_detail" style="margin-right: 2vh;">
+              <img style="margin-top: 50px; margin-left: 0px; margin-right: 5px; padding-right: 0px;" src="{% static 'images/pskills.png' %}" alt="">
+            </li>
+          </ul>
+          <ul style="list-style: none;" class="saa_menu_list_detail">
+            <li>
+              <button class="btn skills" style="height: 25vh; background-color: var(--clr-rose); font-size: 25px; margin-right: 2vh;">achievements</button>
+            </li>
+            <li class="sae_detail" style="margin-right: 2vh;">
+              <button class="btn" onclick="toggleVisibility('hackathons')">Hackathons</button>
+              <button class="btn" onclick="window.location.href='research'">Research work</button>
+      
+              <div id="hackathons" style="display: none; font-family: Arial; max-height: 80%; overflow-y: auto;">
+                <ul>
+                  <li>5th rank in all India in<br>Kshitij IIT Kharagpur Data Science Hackathon</li>
+                  <li>1st rank for project<br>gesture-based game controller in hackatsits</li>
+                  <li>2nd rank for project<br>edict AI in hackatsits</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
-    </Section>
+      </Section>
+      
+      <script>
+        function toggleVisibility(elementId) {
+          var element = document.getElementById(elementId);
+          if (element.style.display === "none") {
+            element.style.display = "block";
+          } else {
+            element.style.display = "none";
+          }
+        }
+      </script>
+      
     <section class="gallery">
 
     </section>

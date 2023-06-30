@@ -1,10 +1,9 @@
 const textOptions = [
     'AI',
     'Autoamation',
-    'Techy',
+    'Tech',
     'Video Editing',
-    'Graphic Designing',
-    'Innovative Solutions',
+    'Innovations',
     'Creative Designs',
   ];
 

@@ -1,4 +1,30 @@
-  
+#hackathons{
+  font-size: 15px;
+}
+@media (max-width: 480px) {
+  #hackathons {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #hackathons {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hackathons {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #hackathons {
+    font-size: 15px;
+  }
+}
+
 
 .SAA{
     display: flex;
@@ -72,6 +98,7 @@
   height:50vh;
   margin-bottom: 25px;
   width:45vh;
+  /* width: 60%; */
   font-size: 25px;
   display: inline-block;
   font-weight: 600;
