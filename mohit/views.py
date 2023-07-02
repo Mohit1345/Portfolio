@@ -116,11 +116,13 @@ def featured_projects_api(request):
             description = ' '.join(description_words)
 
             tags = project.tags.split(',')[:2]
+            link = project.link
             
             featured_project_data = {
                 'name': project.name,
                 'description': tagline,
                 'tags':tags,
+                'link':link,
                 # Add more fields as needed
             }
             

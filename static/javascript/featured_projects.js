@@ -17,11 +17,14 @@ function updateFeaturedProjects(projects) {
   const container = document.querySelector('.featured_projects');
 
   // Update the content of the container
-  container.innerHTML = `
+container.innerHTML = `
+  <a target="_blank" href="${projects.link}">
     <div class="project_title abstract"><b>${projects.name}</b></div>
     <div class="featured_desc abstract">${projects.description}</div>
     <div class="btn featured_tags">${projects.tags}</div>
-  `;
+  </a>
+`;
+
 
   // Apply dark mode font color to the updated elements
   applyDarkModeFontColor();
