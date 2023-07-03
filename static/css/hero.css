@@ -89,7 +89,7 @@ margin-right: 0;
 padding-right: 0;
 transition: transform 3s;
 max-width: 45%;
-height:560px;
+height:auto;
 /* -webkit-border-image: ; */
   /* width: 75%; */
   /* margin-top: 10px; */
@@ -401,7 +401,7 @@ h1{
 
 @media (min-width: 1024px) and (max-width: 1279px) {
 .hero_img {
-  max-width: 70%;
+  /* max-width: 70%; */
   height: auto;
 }
 
@@ -412,7 +412,7 @@ h1{
 
 @media (min-width: 1280px) and (max-width: 1439px) {
 .hero_img {
-  max-width: 80%;
+  /* max-width: 80%; */
   height: auto;
 }
 
