@@ -135,3 +135,4 @@ def featured_projects_api(request):
     
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
