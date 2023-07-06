@@ -141,11 +141,11 @@ left: -2;
 
 background-color: var(--clr-rose);
 
-padding: 20px;
+padding: 15px;
 border-radius: 5px;
 z-index: 999; /* Increase the z-index to ensure it appears above other elements */
 height:auto;
-
+width: auto;
 
 /* From https://css.glass */
 /* background: rgba(225, 29, 72, 0.64); */
@@ -312,6 +312,7 @@ border-radius: 10px;
 h1{
   size: 10px;
 }
+
 }
 
 
@@ -333,6 +334,14 @@ h1{
 .name{
   font-size: 8vh;
 }
+.vertical-nav li{
+  width: 55px;
+  height: 55px;
+  margin-bottom: 8px;
+}
+/* .vertical-nav{
+  padding: 5px;
+} */
 }
 
 
