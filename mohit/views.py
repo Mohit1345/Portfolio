@@ -117,12 +117,15 @@ def featured_projects_api(request):
 
             tags = project.tags.split(',')[:2]
             link = project.link
+            image = f'{project.image}'
+            print(image)
             
             featured_project_data = {
                 'name': project.name,
                 'description': tagline,
                 'tags':tags,
                 'link':link,
+                'image':image,
                 # Add more fields as needed
             }
             

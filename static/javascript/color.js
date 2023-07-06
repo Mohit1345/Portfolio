@@ -1,34 +1,66 @@
 const colorCombinations = [
-  {
-    "--clr-rose": "#e11d48",
-    "--clr-rose-light": "rgba(225,29,72,0.5)",
-    "--clr-indigo": "#4f46e5"
-  },
-  {
-    "--clr-rose": "rgb(150, 255, 88)",
-    "--clr-rose-light": "rgb(90, 108, 80)",
-    "--clr-indigo": "#a324cd"
-  },
-  {
-    "--clr-rose": "rgb(235, 108, 22)",
-    "--clr-rose-light": "rgb(102, 77, 60)",
-    "--clr-indigo": "rgb(49, 26, 11)"
-  },
-  {
-    "--clr-rose": "rgb(224, 218, 27)",
-    "--clr-rose-light": "rgb(138, 166, 66)",
-    "--clr-indigo": "rgb(66, 166, 94)"
-  },{
-    "--clr-rose": "var(--clr-slate600)",
-    "--clr-rose-light": "var(--clr-slate400)",
-    "--clr-indigo": "var(--clr-light)"
-  },{
-    "--clr-rose": "#81ebf5",
-    "--clr-rose-light": "rgb(198, 246, 255)",
-    "--clr-indigo": "var(--clr-light)"
-  }
+  // {
+  //   "--clr-rose": "#e11d48",
+  //   "--clr-rose-light": "rgba(225,29,72,0.5)",
+  //   "--clr-indigo": "#4f46e5"
+  // },
+  // {
+  //   "--clr-rose": "rgb(150, 255, 88)",
+  //   "--clr-rose-light": "rgb(90, 108, 80)",
+  //   "--clr-indigo": "#a324cd"
+  // },
+  // {
+  //   "--clr-rose": "rgb(235, 108, 22)",
+  //   "--clr-rose-light": "rgb(102, 77, 60)",
+  //   "--clr-indigo": "rgb(49, 26, 11)"
+  // },
+  // {
+  //   "--clr-rose": "rgb(224, 218, 27)",
+  //   "--clr-rose-light": "rgb(138, 166, 66)",
+  //   "--clr-indigo": "rgb(66, 166, 94)"
+  // },{
+  //   "--clr-rose": "var(--clr-slate600)",
+  //   "--clr-rose-light": "var(--clr-slate400)",
+  //   "--clr-indigo": "var(--clr-light)"
+  // },{
+  //   "--clr-rose": "#81ebf5",
+  //   "--clr-rose-light": "rgb(198, 246, 255)",
+  //   "--clr-indigo": "var(--clr-light)"
+  // }
 
-
+  
+    {
+      "--clr-rose": "#e11d48",
+      "--clr-rose-light": "rgba(225, 29, 72, 0.5)",
+      "--clr-indigo": "#4f46e5"
+    },
+    {
+      "--clr-rose": "#96ff58",
+      "--clr-rose-light": "#5a6c50",
+      "--clr-indigo": "#a324cd"
+    },
+    {
+      "--clr-rose": "#eb6c16",
+      "--clr-rose-light": "#d69452",
+      "--clr-indigo": "#74fff6"
+    },
+    {
+      "--clr-rose": "#e0da1b",
+      "--clr-rose-light": "#8aa642",
+      "--clr-indigo": "#42a65e"
+    },
+    {
+      "--clr-rose": "var(--clr-slate600)",
+      "--clr-rose-light": "var(--clr-slate400)",
+      "--clr-indigo": "#ffd700"
+    },
+    {
+      "--clr-rose": "#81ebf5",
+      "--clr-rose-light": "#c6f6ff",
+      "--clr-indigo":  "#87CEEB"
+    }
+  
+  
 ];
 
 // document.addEventListener('DOMContentLoaded', function() {

@@ -29,21 +29,18 @@ margin-top: 10px;
 text-shadow: 5px;
 background-color: var(--clr-dark);
 color: var(--clr-rose);
-/* padding-right: 7px; */
-/* background: rgba(55, 64, 65, 0.73); */
-/* border-radius: 16px; */
+
 box-shadow: 0 4px 30px rgba(54, 144, 87, 0.1);
 backdrop-filter: blur(2.7px);
 -webkit-backdrop-filter: blur(2.7px);
 border: 1px solid rgba(55, 64, 65, 0.19);
 font-family:Verdana, Geneva, Tahoma, sans-serif;
-/* height: 100%; */
 
 text-decoration: line-through;
 font-size: 12vh;
 width: auto;
 
-
+font-style: bold;
 border:3px solid var(--clr-rose);
 border-radius:10px;
 }
@@ -224,14 +221,14 @@ width: 80%  ;
 /* background-color: blue; */
 border:5px dashed var(--clr-rose);
 /* border-radius:3px ;  */
-width: 30%; 
+/* width: 30%;  */
 margin-top: 5vh; 
 border-spacing: 5px;
 /* font-size:20px; */
 font-size: 20px;
 
 height: auto;
-width: 43%;
+width: 60%;
 /* From https://css.glass */
 /* background: var(--clr-rose); */
 padding: 2vh;
@@ -281,7 +278,7 @@ color: #F8F8F8;
 
 
 .featured_projects {
-border: 1px dashed ver(--clr-rose);
+/* border: 3px dashed var(--clr-rose); */
 overflow: hidden;
 max-height: 700px;
 margin-bottom: 10px;
@@ -291,11 +288,12 @@ width: auto;
 .featured_img{
 align-items: center;
 align-content: center;
-margin: 0vh 2vh 2vh 2vh;
-height: 220px;
-width: 400px;
+/* margin: 0vh 2vh 2vh 2vh; */
+height: 9;
+width: 16;
 border: 1px solid var(--clr-rose);
 border-radius: 10px;
+/* padding-right: 2px; */
 }
 
 

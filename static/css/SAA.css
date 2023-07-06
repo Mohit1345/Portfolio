@@ -3,25 +3,25 @@
 }
 @media (max-width: 480px) {
   #hackathons {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   #hackathons {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #hackathons {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1025px) {
   #hackathons {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
@@ -123,15 +123,6 @@ border: 1px solid var(--clr-rose);
 }
 
 
-/* #hackathons {
-  font-size: 20px;
-  color: blue;
-} */
-
-/* #chatFrame{
-  width: 500px;
-  height: 400px;
-  border: none;} */
   @media only screen and (max-width: 430px) {
     h1{
       size: 10px;
@@ -203,7 +194,7 @@ border: 1px solid var(--clr-rose);
   }
   .sae_detail {
     font-size: 18px;
-    width: 80%;
+    width: 88%;
     height: auto;
   }
 }
@@ -271,4 +262,17 @@ border: 1px solid var(--clr-rose);
 
 /* Add more media queries for larger screen sizes if needed */
 
+@media screen and (max-width: 768px) {
+  /* Styles for screens up to 768px */
+  .achi_btn {
+    width: 150px;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  /* Styles for screens up to 480px */
+  .achi_btn {
+    width: auto;
+    font-size: 12px;
+  }
+}

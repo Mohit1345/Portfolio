@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mohit',
     'blog_effect',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

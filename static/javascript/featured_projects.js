@@ -19,6 +19,7 @@ function updateFeaturedProjects(projects) {
   // Update the content of the container
 container.innerHTML = `
   <a target="_blank" href="${projects.link}">
+  <img class="featured_img" src="${projects.image}" alt="">
     <div class="project_title abstract"><b>${projects.name}</b></div>
     <div class="featured_desc abstract">${projects.description}</div>
     <div class="btn featured_tags">${projects.tags}</div>
