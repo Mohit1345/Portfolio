@@ -1,13 +1,8 @@
 from django.shortcuts import render
 from .models import Featured_projects,Research
 
-# Create your views here.
+
 def home(request):
-
-
-    # context = {
-    #     'featured_projects':F_projects,
-    # }
     return render(request,"home.html")
 
 
@@ -26,10 +21,7 @@ def research(request):
 
     return render(request,"research.html",context)
 
-# def contact(request):
-#     return render(request,"contact.html")
 
-# views.py
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings

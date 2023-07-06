@@ -70,24 +70,6 @@
     }
 
     
-
-
-/* @media (max-width: 767px) {
-  .content-container {
-    flex-direction: column;
-  }
-  .paper-container{
-    width: 400px;
-    padding: 10px;
-  }
-  .left-section, .right-section {
-      width: 199px;
-      padding: 20px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-    }
-} */
-
 @media (max-width: 767px) {
   .paper-container {
     width: auto;
@@ -110,15 +92,12 @@
   }
 }
 
-
-
-
-
   </style>
   {% endblock %}
 
 
 {% block content %}
+<div style="display:none;"class="text_content"></div>
 <body>
   <div class="paper-container">
     <h1 class="heading">Research Paper and Patents</h1>
@@ -208,7 +187,7 @@
 
       <h3>📘Book Featured</h3>
       <ol>
-      <li><i> IEEE Published</i></li>
+      <li><i> Easy Chair</i></li>
       <br>
       <details>
         {% for books in book_featured %}

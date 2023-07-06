@@ -3,8 +3,9 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/hero.css' %}" type="text/css"/>
 <link rel="stylesheet" href="{% static 'css/SAA.css' %}" type="text/css"/>
-<script src="{% static 'javascript\\dynamic_text.js' %}"></script>
 <script src="{% static 'javascript/color.js' %}"></script>
+
+
 
 <style>
     .form_contact{
@@ -18,25 +19,25 @@
 {% endblock %}
 {%  block content %}
 
+<div style="display:none;"class="text_content"></div>
 
-
-<form method="post" class="form_contact">
-    <h1 style="-webkit-text-stroke-width: 0.0px;-webkit-text-stroke-color: var(--clr-rose);font-size: 50px;">Contact Form</h1>
+<form method="post" class="form_contact abstract">
+    <h1 class = "abstract" style="-webkit-text-stroke-width: 0.0px;-webkit-text-stroke-color: var(--clr-rose);font-size: 50px;">Contact Form</h1>
   {% csrf_token %}
   <div class="row mb-3">
-    <label class="col-sm-2 col-form-label">Your Name</label>
+    <label class="abstract col-sm-2 col-form-label">Your Name</label>
     <div class="col-sm-10">
       {{ form.name }}
     </div>
   </div>
   <div class="row mb-3">
-    <label class="col-sm-2 col-form-label">Your Email</label>
+    <label class="abstract col-sm-2 col-form-label">Your Email</label>
     <div class="col-sm-10">
       {{ form.email }}
     </div>
   </div>
   <div class="row mb-3">
-    <label class="col-sm-2 col-form-label">Message</label>
+    <label class="abstract col-sm-2 col-form-label">Message</label>
     <div class="col-sm-10">
       {{ form.message }}
     </div>
@@ -44,9 +45,11 @@
   <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary ">Submit</button>
     </div>
   </div>
+
 </form>
 </div>
+
 {% endblock %}

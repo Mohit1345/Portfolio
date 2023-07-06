@@ -29,39 +29,6 @@ const textOptions = [
 
 
 
-//DYNAMIC IMAGE
-
-// import os
-// import glob
-
-
-// folder_path = '/path/to/folder'
-
-
-// image_files = glob.glob(os.path.join(folder_path, '*.jpg'))
-
-
-// // Array of image file names
-// const imageFiles = ['profile1.png', 'profile2.png', 'profile3.png'];
-
-// // Index to keep track of the current image
-// let currIndex = 0;
-
-// // Function to change the image source
-// function changeImage() {
-//   const imgElement = document.getElementById('hero_img');
-//   imgElement.src = `/static/images/${imageFiles[currIndex]}`;
-  
-//   // Increment the index or reset it to 0 if it reaches the end of the array
-//   currIndex = (currIndex + 1) % imageFiles.length;
-// }
-
-// // Interval in milliseconds (e.g., 5 seconds)
-// const interval = 5000;
-
-// // Call the changeImage function initially and set the interval for subsequent changes
-// changeImage();
-// setInterval(changeImage, interval);
 
 
 //mohits portfolio
