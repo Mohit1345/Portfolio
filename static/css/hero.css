@@ -34,7 +34,7 @@ box-shadow: 0 4px 30px rgba(54, 144, 87, 0.1);
 backdrop-filter: blur(2.7px);
 -webkit-backdrop-filter: blur(2.7px);
 border: 1px solid rgba(55, 64, 65, 0.19);
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+/* font-family:Verdana, Geneva, Tahoma, sans-serif; */
 
 text-decoration: line-through;
 font-size: 12vh;
