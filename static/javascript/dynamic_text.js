@@ -4,7 +4,7 @@ const textOptions = [
     'Tech',
     'Video Editing',
     'Innovations',
-    'Creative Designs',
+    'Creativity',
   ];
 
   // Index of the currently displayed text
