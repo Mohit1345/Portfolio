@@ -39,7 +39,8 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue';
+    /* font-family: 'Helvetica Neue'; */
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--clr-dark);
     color: var(--clr-light);
 }

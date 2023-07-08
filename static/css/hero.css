@@ -431,27 +431,10 @@ h1{
   .hero_without_name {
     flex-direction: column;
   }
-  /* .hero_img{
-    border:3px solid var(--clr-rose);
-    border-radius: 50%;
-    align-items: center;
-    align-content: center;
-  } */
 }
 
 
-/* @media (max-width: 390px) {
-  .hero_dynamic_txt .hero_h1 {
-    font-size: 10px;
-  }
-  }
 
-@media (max-width: 767px) {
-  .hero_dynamic_txt .hero_h1 {
-    font-size: 3rem;
-  }
-  }
-   */
 
 
   
