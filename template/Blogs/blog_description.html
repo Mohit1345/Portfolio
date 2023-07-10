@@ -34,7 +34,35 @@
          References<br>
         <div class="blog_detail_references abstract">{{blog_detail.references}}</div> 
      </div>
-</div>
+
+
+     <div style="display:flex;gap: 5px;" class="extra">
+      <div style="display:flex;flex-direction: column;" class="likees">
+     <p style="text-align: center;">{{ blog_detail.likes }}</p>
+     <form action="{% url 'like_post' blog_detail.id %}" method="post">
+       {% csrf_token %}
+       <button class="btn" type="submit">Like</button>
+     </form>
+    </div>
+     <br>
+     <br>
+     <!-- Social sharing buttons/icons -->
+     <div style="display:flex;gap:3px;" class="social-sharing">
+       <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" rel="noopener">
+         <img src='{% static "images\social_media\linkedin.png" %}'alt="Share on LinkedIn">
+       </a>
+       <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ blog.title }}" target="_blank" rel="noopener">
+         <img src='{% static "images\social_media\twitter.png" %}' alt="Share on Twitter">
+       </a>
+       <a href="https://www.instagram.com/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener">
+         <img src='{% static "images\social_media\insta.png" %}' alt="Share on Instagram">
+       </a>
+       <a href="whatsapp://send?text={{ request.build_absolute_uri }}" target="_blank" rel="noopener">
+         <img src='{% static "images\social_media\whatsapp.png" %}' alt="Share on WhatsApp">
+       </a>
+       <!-- Add more social media sharing options as desired -->
+     </div>
+    </div>
 
 </div>
 {% endblock %}

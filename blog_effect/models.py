@@ -30,6 +30,8 @@ class Blog(models.Model):
     imp_Links = models.CharField(max_length=250, blank=True)
     references = models.CharField(max_length=400, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    likes = models.PositiveIntegerField(default=0)
+    shares = models.PositiveIntegerField(default=0)
 
 
 
