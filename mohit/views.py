@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from .models import Featured_projects,Research
-from decouple import config
+
 
 def home(request):
-    context = {"token":config('token')}
-    return render(request,"home.html",context)
+    return render(request,"home.html")
 
 
 def research(request):
