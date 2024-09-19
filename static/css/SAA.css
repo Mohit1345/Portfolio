@@ -258,8 +258,8 @@ border: 1px solid var(--clr-rose);
 
 /* Additional style for preventing overflow */
 .saa_menu_list_detail {
-  overflow-x: auto;
-  white-space: nowrap;
+  /* overflow-x: auto; */
+  /* white-space: nowrap; */
 }
 
 /* Add more media queries for larger screen sizes if needed */
