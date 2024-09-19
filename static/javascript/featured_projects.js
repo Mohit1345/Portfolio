@@ -47,4 +47,4 @@ function applyDarkModeFontColor() {
 fetchFeaturedProjects();
 
 // Refresh the featured projects every 10 seconds
-setInterval(fetchFeaturedProjects, 10000);
+setInterval(fetchFeaturedProjects, 3000);

@@ -32,7 +32,7 @@ function fetchFeaturedProjects() {
   fetchFeaturedProjects();
   
   // Refresh the featured projects every 10 seconds
-  setInterval(fetchFeaturedProjects, 10000);
+  setInterval(fetchFeaturedProjects, 3000);
 
 
 //   <img class="featured_img" src="${projects.image}" alt="">

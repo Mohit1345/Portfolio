@@ -27,7 +27,7 @@ const textOptions = [
   });
 
   // Start changing the text automatically after 3 seconds
-  setInterval(changeText, 2000);
+  setInterval(changeText, 3000);
 
 
 
